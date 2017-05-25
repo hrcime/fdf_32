@@ -50,3 +50,7 @@ Các bạn trong team review chéo cho nhau + comment OK vào pull sau khi revie
 
 # [Framgia Coding Standard PHP]
 https://github.com/framgia/coding-standards/tree/master/vn/php
+
+# Sử dụng PHP-Code-Sniffer kiểm tra code convention với Sublime Text 
+https://gist.github.com/tuanpht/98da682333dd1bc8e4516417653158aa
+https://github.com/wataridori/framgia-php-codesniffer
