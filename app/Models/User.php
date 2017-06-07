@@ -20,6 +20,7 @@ class User extends Authenticatable
         'password',
         'address',
         'phone',
+        'avatar',
     ];
 
     /**
@@ -28,7 +29,8 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password',
+        'remember_token',
     ];
 
     public function rates()
@@ -44,6 +46,11 @@ class User extends Authenticatable
     public function orders()
     {
         return $this->hasMany(Order::class);
+    }
+
+    public function socials()
+    {
+        return $this->hasMany(Social::class);
     }
 
     public function setPasswordAttribute($value)

@@ -24,6 +24,9 @@ return [
         'b-reset' => 'Reset Password',
         'b-send' => 'Send Password Reset Link',
         'b-logout' => 'Logout',
+        'b-facebook' => 'Login With Facebook',
+        'b-google' => 'Login With Google',
+        'b-twitter' => 'Login With Twitter',
     ],
     'page' => [
         't-dashboard' => 'DashBoard',
@@ -32,5 +35,6 @@ return [
 
     'msg' => [
         'logged' => 'You are logged in!',
+        'login-fail' => 'Error !',
     ]
 ];
