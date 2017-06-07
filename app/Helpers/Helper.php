@@ -1,0 +1,22 @@
+<?php
+
+namespace App\Helpers;
+
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Auth;
+
+class Helper
+{
+    public static function upload($file, $path, $oldFile = '')
+    {
+        if (!empty($oldFile)) {
+            $oldFile = explode('/', $oldFile);
+            $oldFile = $oldFile[count($oldFile) - 1];
+            File::delete(config('settings.path_upload') . '/' . $path . '/' . $oldFile);
+        }
+        $imageName = time() . str_random(5) . '.' . $file->getClientOriginalExtension();
+        $file->move(config('settings.path_upload') . '/' . $path . '/', $imageName);
+
+        return $imageName;
+    }
+}
