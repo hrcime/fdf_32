@@ -8,6 +8,9 @@ return [
         't-reset' => 'Reset Password',
         't-profile' => 'Profile',
         't-pwd-change' => 'Change Password',
+        't-list' => 'User List',
+        't-create' => 'Create New User',
+        't-edit' => 'Edit User',
 
         //form
         'f-name' => 'Name',
@@ -19,6 +22,8 @@ return [
         'f-phone' => 'Phone',
         'f-address' => 'Address',
         'f-avatar' => 'Avatar',
+        'f-admin' => 'Type Account',
+
 
         //button
         'b-register' => 'Register',
@@ -28,6 +33,10 @@ return [
         'b-reset' => 'Reset Password',
         'b-send' => 'Send Password Reset Link',
         'b-logout' => 'Logout',
+        'b-create' => 'Create',
+        'b-edit' => 'Edit',
+        'b-cancel' => 'Cancel',
+        'b-back' => 'Back',
         'b-facebook' => 'Login With Facebook',
         'b-google' => 'Login With Google',
         'b-twitter' => 'Login With Twitter',
@@ -36,10 +45,22 @@ return [
 
         //msg
         'msg-updated' => 'Update Success',
+        'msg-created' => 'Create Success',
+        'msg-deleted' => 'Delete Success',
         'msg-old-password' => 'Old password does not match',
 
-    ],
+        //table
+        'tb-id' => 'ID',
+        'tb-name' => 'Name',
+        'tb-email' => 'Email',
+        'tb-phone' => 'Phone',
+        'tb-address' => 'Address',
+        'tb-action' => 'Action',
 
+        //type account
+        'member' => 'Member',
+        'admin' => 'Admin',
+    ],
     'page' => [
         't-dashboard' => 'DashBoard',
         't-home' => 'Home',

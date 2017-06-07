@@ -24,6 +24,7 @@ Route::get('login/{provider}/callback', 'Auth\LoginController@handleProviderCall
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+//User router
 Route::group(['prefix' => 'user', 'middleware' => 'auth'], function () {
     //show profile and update
     Route::get('profile', 'User\HomeController@show')->name('user.show');
@@ -32,4 +33,10 @@ Route::group(['prefix' => 'user', 'middleware' => 'auth'], function () {
     //Change password
     Route::get('password', 'User\HomeController@showFormPassword')->name('user.password');
     Route::post('password', 'User\HomeController@changePassword');
+});
+
+//Admin router
+Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'admin'], function () {
+    //Route manager user
+    Route::resource('user', 'UserController', ['as' => 'admin', 'except' => 'show']);
 });

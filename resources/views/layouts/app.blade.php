@@ -9,9 +9,10 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
-
+    @section('incCss')
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    {{ Html::style('css/app.css') }}
+    @show
 </head>
 <body>
     <div id="app">
@@ -72,6 +73,9 @@
     </div>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
+    @section('incJs')
+        {{ Html::script('js/app.js') }}
+        {{ Html::script('js/common.js') }}
+    @show
 </body>
 </html>
