@@ -1,6 +1,38 @@
 <?php
 
 return [
+    'category' => [
+        //title
+        't-category' => 'Categories',
+        't-create' => 'Create new category',
+        't-update' => 'Update',
+
+        //table
+        'tb-action' => 'Action',
+        'tb-id' => 'ID',
+        'tb-name' => 'Name',
+        'tb-parent' => 'Parent',
+
+        //form
+        'f-parent' => 'Parent',
+        'f-name' => 'Name',
+
+        //button
+        'b-create' => 'Create New',
+        'b-update' => 'Update',
+        'b-back' => 'Back',
+        'b-edit' => 'Edit',
+        'b-delete' => 'Delete',
+
+        //Default value
+        'v-parent' => 'Is Parent',
+
+        //msg
+        'msg-deleted' => 'Delete Success',
+        'msg-updated' => 'Update Success',
+        'msg-hasChildrens' => 'Please delete children category first !',
+    ],
+
     'user' => [
         //title
         't-register' => 'Register',
@@ -69,5 +101,6 @@ return [
     'msg' => [
         'logged' => 'You are logged in!',
         'login-fail' => 'Error !',
+        'created' => 'Create success',
     ],
 ];
