@@ -66,4 +66,9 @@ class User extends Authenticatable
             return config('settings.path_avatar') . '/' . $value;
         }
     }
+
+    public function isAdmin()
+    {
+        return $this->is_admin == 1;
+    }
 }
