@@ -46,4 +46,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'admi
 
     //Route manager category
     Route::resource('category', 'CategoryController', ['as' => 'admin', 'except' => 'show']);
+
+    //Route manager suggest
+    Route::resource('suggest', 'SuggestController', ['as' => 'admin', 'except' => ['create', 'store']]);
 });
