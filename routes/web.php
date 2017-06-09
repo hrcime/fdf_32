@@ -35,6 +35,10 @@ Route::group(['prefix' => 'user', 'middleware' => 'auth'], function () {
     Route::post('password', 'User\HomeController@changePassword');
 });
 
+//Route suggest
+Route::get('suggest', ['middleware' => 'auth', 'uses' => 'SuggestController@create'])->name('suggest');
+Route::post('suggest', ['middleware' => 'auth', 'uses' => 'SuggestController@store']);
+
 //Admin router
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'admin'], function () {
     //Route manager user

@@ -24,4 +24,9 @@ class Suggest extends Model
     {
         return $this->belongsTo(Category::class);
     }
+
+    public function getImageAttribute($value)
+    {
+        return config('setting.path_suggest') . '/' . $value;
+    }
 }
