@@ -103,4 +103,21 @@ return [
         'login-fail' => 'Error !',
         'created' => 'Create success',
     ],
+
+    'suggest' => [
+        //title
+        't-create' => 'Create Suggest',
+
+        //form
+        'f-title' => 'Title',
+        'f-image' => 'Image',
+        'f-category' => 'Category',
+        'f-content' => 'Content',
+
+        //button
+        'b-send' => 'Send',
+
+        //msg
+        'msg-thankyou' => 'Thanks you for your suggest !',
+    ],
 ];
