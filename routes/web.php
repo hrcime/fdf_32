@@ -39,4 +39,7 @@ Route::group(['prefix' => 'user', 'middleware' => 'auth'], function () {
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'admin'], function () {
     //Route manager user
     Route::resource('user', 'UserController', ['as' => 'admin', 'except' => 'show']);
+
+    //Route manager category
+    Route::resource('category', 'CategoryController', ['as' => 'admin', 'except' => 'show']);
 });

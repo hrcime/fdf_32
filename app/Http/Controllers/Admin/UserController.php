@@ -8,7 +8,6 @@ use App\Models\User;
 use App\Http\Requests\User\UpdateUserRequest;
 use App\Http\Requests\User\CreateUserRequest;
 
-
 class UserController extends Controller
 {
     public function index()
