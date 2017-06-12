@@ -15,14 +15,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/home', 'HomeController@index')->name('home');
+
 //Auth
 Auth::routes();
 
 //Auth via social account
 Route::get('login/{provider}', 'Auth\LoginController@redirectToProvider')->name('auth.social');
 Route::get('login/{provider}/callback', 'Auth\LoginController@handleProviderCallback');
-
-Route::get('/home', 'HomeController@index')->name('home');
 
 //User router
 Route::group(['prefix' => 'user', 'middleware' => 'auth'], function () {
@@ -40,13 +40,16 @@ Route::get('suggest', ['middleware' => 'auth', 'uses' => 'SuggestController@crea
 Route::post('suggest', ['middleware' => 'auth', 'uses' => 'SuggestController@store']);
 
 //Admin router
-Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'admin'], function () {
+Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'admin', 'as' => 'admin.'], function () {
     //Route manager user
-    Route::resource('user', 'UserController', ['as' => 'admin', 'except' => 'show']);
+    Route::resource('user', 'UserController', ['except' => 'show']);
 
     //Route manager category
-    Route::resource('category', 'CategoryController', ['as' => 'admin', 'except' => 'show']);
+    Route::resource('category', 'CategoryController', ['except' => 'show']);
 
     //Route manager suggest
-    Route::resource('suggest', 'SuggestController', ['as' => 'admin', 'except' => ['create', 'store']]);
+    Route::resource('suggest', 'SuggestController', ['except' => ['create', 'store']]);
+
+    //Route manager product
+    Route::resource('product', 'ProductController', ['except' => 'show']);
 });

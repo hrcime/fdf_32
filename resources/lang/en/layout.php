@@ -1,6 +1,31 @@
 <?php
 
 return [
+    'product' => [
+        't-create' => 'Create New Product',
+        't-update' => 'Edit Product',
+        't-products' => 'Products',
+
+        'f-name' => 'Name',
+        'f-price' => 'Price',
+        'f-quantity' => 'Quantity',
+        'f-image' => 'Image',
+        'f-information' => 'Information',
+        'f-category' => 'Category',
+        'f-id' => 'ID',
+        'f-action' => 'Action',
+
+        'b-back' => 'Back',
+        'b-create' => 'Create',
+        'b-update' => 'Update',
+        'b-edit' => 'Edit',
+        'b-delete' => 'Delete',
+
+        'msg-created' => 'Create Success',
+        'msg-updated' => 'Update Success',
+        'msg-deleted' => 'Delete Success',
+    ],
+
     'sugg' => [
         //title
         't-suggests' => 'Suggest',

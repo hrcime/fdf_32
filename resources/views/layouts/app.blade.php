@@ -12,6 +12,7 @@
     @section('incCss')
     <!-- Styles -->
     {{ Html::style('css/app.css') }}
+    {{ Html::style('css/common.css') }}
     @show
 </head>
 <body>
@@ -76,6 +77,7 @@
     @section('incJs')
         {{ Html::script('js/app.js') }}
         {{ Html::script('js/common.js') }}
+        {{ Html::script('//cdn.ckeditor.com/4.7.0/standard/ckeditor.js') }}
     @show
 </body>
 </html>

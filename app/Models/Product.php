@@ -30,4 +30,9 @@ class Product extends Model
     {
         return $this->belongsTo(Category::class);
     }
+
+    public function getImageAttribute($value)
+    {
+        return config('settings.path_product') . '/' . $value;
+    }
 }
