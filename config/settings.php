@@ -13,6 +13,9 @@ return [
     //Path to folder suggest
     'path_suggest' => env('APP_URL') . '/public/uploads/suggest',
 
+    //Path to folder product
+    'path_product' => env('APP_URL') . '/public/uploads/product',
+
     //Default public/uploads
     'path_upload' => public_path('uploads'),
 
