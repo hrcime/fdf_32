@@ -25,8 +25,15 @@ class Suggest extends Model
         return $this->belongsTo(Category::class);
     }
 
+    public function scopeInfo($query)
+    {
+        return $query->with('user', 'category');
+    }
+
     public function getImageAttribute($value)
     {
-        return config('setting.path_suggest') . '/' . $value;
+        if (!empty($value)) {
+            return config('settings.path_suggest') . '/' . $value;
+        }
     }
 }

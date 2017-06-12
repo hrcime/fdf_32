@@ -1,6 +1,39 @@
 <?php
 
 return [
+    'sugg' => [
+        //title
+        't-suggests' => 'Suggest',
+        't-content' => 'Content',
+        't-detail' => 'Detail',
+
+        //table
+        'tb-id' => 'ID',
+        'tb-title' => 'Title',
+        'tb-category' => 'Category',
+        'tb-user' => 'Sender',
+        'tb-status' => 'Status',
+        'tb-action' => 'Action',
+        'tb-daysend' => 'Time',
+        'tb-image' => 'Image',
+
+        //button
+        'b-delete' => 'Delete',
+        'b-detail' => 'Detail',
+        'b-back' => 'Back',
+        'b-update' => 'Update',
+
+        //status
+        'status' => [
+            0 => 'New',
+            1 => 'Processing',
+            2 => 'Done',
+        ],
+
+        'msg-success' => 'Changed',
+        'msg-deteled' => 'Deleted',
+    ],
+
     'category' => [
         //title
         't-category' => 'Categories',
