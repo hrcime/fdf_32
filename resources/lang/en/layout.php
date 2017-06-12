@@ -178,4 +178,13 @@ return [
         //msg
         'msg-thankyou' => 'Thanks you for your suggest !',
     ],
+
+    'latest' => 'Latest Product',
+    'detail' => 'Detail',
+    'add-cart' => 'Add to Cart',
+    'information' => 'Information',
+    'quantity' => 'Quantity',
+    'rate' => 'Rate',
+    'price' => 'Price',
+    'category' => 'Category',
 ];

@@ -24,6 +24,8 @@ Auth::routes();
 Route::get('login/{provider}', 'Auth\LoginController@redirectToProvider')->name('auth.social');
 Route::get('login/{provider}/callback', 'Auth\LoginController@handleProviderCallback');
 
+Route::get('/home', 'HomeController@index')->name('home');
+
 //User router
 Route::group(['prefix' => 'user', 'middleware' => 'auth'], function () {
     //show profile and update
@@ -53,3 +55,9 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'admi
     //Route manager product
     Route::resource('product', 'ProductController', ['except' => 'show']);
 });
+
+//Product route
+Route::get('product/{id}', 'ProductController@show');
+
+//Product category
+Route::get('category/{id}', 'ProductController@showProductByCategory');
