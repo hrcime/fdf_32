@@ -11,6 +11,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
     @section('incCss')
     <!-- Styles -->
+    {{ Html::style('//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css') }}
     {{ Html::style('css/app.css') }}
     {{ Html::style('css/common.css') }}
     @show
