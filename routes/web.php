@@ -24,8 +24,6 @@ Auth::routes();
 Route::get('login/{provider}', 'Auth\LoginController@redirectToProvider')->name('auth.social');
 Route::get('login/{provider}/callback', 'Auth\LoginController@handleProviderCallback');
 
-Route::get('/home', 'HomeController@index')->name('home');
-
 //User router
 Route::group(['prefix' => 'user', 'middleware' => 'auth'], function () {
     //show profile and update
@@ -61,3 +59,6 @@ Route::get('product/{id}', 'ProductController@show');
 
 //Product category
 Route::get('category/{id}', 'ProductController@showProductByCategory');
+
+//Rating route
+Route::post('rate', 'RateController@update');
