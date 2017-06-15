@@ -1,6 +1,45 @@
 <?php
 
 return [
+    'order' => [
+        //title
+        't-orders' => 'Orders',
+        't-detail' => 'Detail',
+
+        //table
+        'tb-id' => '#',
+        'tb-name' => 'Name',
+        'tb-qty' => 'Quantity',
+        'tb-user' => 'User',
+        'tb-status' => 'Status',
+        'tb-action' => 'Action',
+        'tb-created' => 'Created At',
+        'tb-updated' => 'Updated At',
+        'tb-price' => 'Total Price',
+        'tb-total' => 'Total',
+        'tb-order-id' => 'Order ID',
+
+
+        //button
+        'b-delete' => 'Delete',
+        'b-detail' => 'Detail',
+        'b-back' => 'Back',
+        'b-update' => 'Update',
+
+        //status
+        'status' => [
+            0 => 'New',
+            1 => 'Processing',
+            2 => 'Done',
+            3 => 'Pending',
+        ],
+
+        'msg-updated' => 'Updated',
+        'msg-success' => 'Changed',
+        'msg-deleted' => 'Deleted',
+        'msg-notfound' => 'Order not found',
+    ],
+
     'product' => [
         't-create' => 'Create New Product',
         't-update' => 'Edit Product',
@@ -24,6 +63,7 @@ return [
         'msg-created' => 'Create Success',
         'msg-updated' => 'Update Success',
         'msg-deleted' => 'Delete Success',
+        'msg-exist' => 'Does not exist',
     ],
 
     'sugg' => [

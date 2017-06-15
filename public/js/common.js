@@ -12,6 +12,10 @@ $(document).ready(function () {
         }
     });
 
+    $('#orderStatus').click(function () {
+        $('#order-status').submit();
+    });
+
     $.ajaxSetup({
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -26,7 +30,7 @@ $(document).ready(function () {
             method: 'POST',
             data: {"product_id": product_id, "point": $(this).val()},
             success: function (result) {
-                if (!!result.error){
+                if (!!result.error) {
                     alert(result.msg);
                     return;
                 }

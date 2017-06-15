@@ -25,4 +25,11 @@ return [
         1 => 'Processing',
         2 => 'Done',
     ],
+
+    'order_status' => [
+        0 => 'New',
+        1 => 'Processing',
+        2 => 'Done',
+        3 => 'Pending',
+    ]
 ];
