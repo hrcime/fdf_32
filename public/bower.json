@@ -1,0 +1,19 @@
+{
+  "name": "public",
+  "homepage": "https://github.com/hrcime/fdf_32",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ckeditor": "^4.7.0",
+    "alertifyjs": "^1.0.11",
+    "font-awesome": "Font-Awesome#^4.7.0"
+  }
+}

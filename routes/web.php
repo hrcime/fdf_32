@@ -64,3 +64,8 @@ Route::get('category/{id}', 'ProductController@showProductByCategory');
 
 //Rating route
 Route::post('rate', 'RateController@update');
+
+//Cart route
+Route::resource('cart', 'CartController');
+Route::post('cart/remove', 'CartController@remove');
+

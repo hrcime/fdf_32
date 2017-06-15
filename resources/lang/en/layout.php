@@ -30,14 +30,48 @@ return [
         'status' => [
             0 => 'New',
             1 => 'Processing',
-            2 => 'Done',
-            3 => 'Pending',
+            2 => 'Pending',
+            3 => 'Done',
         ],
 
         'msg-updated' => 'Updated',
         'msg-success' => 'Changed',
         'msg-deleted' => 'Deleted',
         'msg-notfound' => 'Order not found',
+    ],
+
+    'cart' => [
+        'title' => [
+            'detail' => 'Cart detail',
+            'info' => 'Infomation',
+            'total-bill' => 'Total bill',
+            'total-qty' => 'Total quantity',
+        ],
+
+        'tb' => [
+            'id' => '#',
+            'name' => 'Name',
+            'image' => 'Image',
+            'price' => 'Price',
+            'quantity' => 'Quantity',
+            'total_per_item' => 'Total ( Price x Quantity )',
+            'action' => 'Action',
+        ],
+
+        'msg' => [
+            'added' => 'Added',
+            'updated'=> 'Updated',
+            'removed' => 'Removed',
+            'notfound' => 'Product not found',
+            'ajax' => 'Support for ajax',
+        ],
+
+        'btn' => [
+            'remove' => 'Remove',
+            'delete' => 'Delete cart',
+            'update' => 'Update',
+            'order' => 'Order',
+        ],
     ],
 
     'product' => [

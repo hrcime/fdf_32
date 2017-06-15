@@ -11,9 +11,10 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
     @section('incCss')
     <!-- Styles -->
-    {{ Html::style('//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css') }}
+    {{ Html::style('bower_components/font-awesome/css/font-awesome.min.css') }}
     {{ Html::style('css/app.css') }}
     {{ Html::style('css/common.css') }}
+    {{ Html::style('bower_components/alertifyjs/dist/css/alertify.css') }}
     @show
 </head>
 <body>
@@ -73,12 +74,12 @@
 
         @yield('content')
     </div>
-
     <!-- Scripts -->
     @section('incJs')
         {{ Html::script('js/app.js') }}
         {{ Html::script('js/common.js') }}
-        {{ Html::script('//cdn.ckeditor.com/4.7.0/standard/ckeditor.js') }}
+        {{ Html::script('bower_components/ckeditor/ckeditor.js') }}
+        {{ Html::script('bower_components/alertifyjs/dist/js/alertify.js') }}
     @show
 </body>
 </html>
