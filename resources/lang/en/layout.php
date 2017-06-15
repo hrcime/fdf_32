@@ -187,4 +187,9 @@ return [
     'rate' => 'Rate',
     'price' => 'Price',
     'category' => 'Category',
+
+    //msg
+    'required-login' => 'Please login to rate this product',
+    'support-ajax' => 'Support for ajax',
+    'try-again' => 'Please try again later',
 ];
