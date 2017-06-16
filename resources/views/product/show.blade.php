@@ -46,9 +46,17 @@
                                     <div class="col-md-6">
                                         <div class="info">
                                             <p class="key">{{ trans('layout.quantity') }}</p>
-                                            <p><input name="quantity" type="number" value="1" class="form-control"></p>
+                                            <p>
+                                                {{ Form::number('quantity', 1, [
+                                                    'class' => 'form-control',
+                                                    'product-id' => $product->id,
+                                                    'data-href' => action('CartController@store'),
+                                                    ]) }}
+                                            </p>
                                             <button class="btn btn-primary add-cart btn-block"
-                                                    role="button">{{ trans('layout.add-cart') }}</button>
+                                                    product-id="{{ $product->id }}"
+                                                    role="button">{{ trans('layout.add-cart') }}
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
