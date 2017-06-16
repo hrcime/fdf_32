@@ -32,6 +32,9 @@ Route::group(['prefix' => 'user', 'middleware' => 'auth'], function () {
     //Change password
     Route::get('password', 'User\HomeController@showFormPassword')->name('user.password');
     Route::post('password', 'User\HomeController@changePassword');
+
+    //Order
+    Route::resource('order', 'OrderController', ['except' => ['edit', 'update', 'create']]);
 });
 
 //Route suggest
@@ -68,4 +71,3 @@ Route::post('rate', 'RateController@update');
 //Cart route
 Route::resource('cart', 'CartController');
 Route::post('cart/remove', 'CartController@remove');
-

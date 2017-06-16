@@ -26,10 +26,14 @@ return [
         2 => 'Done',
     ],
 
+    // Order
     'order_status' => [
         0 => 'New',
         1 => 'Processing',
-        2 => 'Done',
-        3 => 'Pending',
-    ]
+        2 => 'Pending',
+        3 => 'Done',
+        4 => 'Cancelled',
+    ],
+
+    'default_order_cancel' => 4,
 ];
