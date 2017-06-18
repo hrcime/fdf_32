@@ -71,3 +71,6 @@ Route::post('rate', 'RateController@update');
 //Cart route
 Route::resource('cart', 'CartController');
 Route::post('cart/remove', 'CartController@remove');
+
+//Filter route
+Route::get('filter', 'FilterController@index');
