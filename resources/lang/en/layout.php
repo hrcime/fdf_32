@@ -13,6 +13,7 @@ return [
         //btn
         'b-filter' => 'Filter',
     ],
+
     'order' => [
         //title
         't-orders' => 'Orders',
@@ -49,7 +50,7 @@ return [
         ],
 
         'msg-updated' => 'Updated',
-        'msg-success' => 'Changed',
+        'msg-changed' => 'Changed',
         'msg-deleted' => 'Deleted',
         'msg-cancelled' => 'Cancelled',
         'msg-notfound' => 'Order not found',
@@ -276,11 +277,14 @@ return [
     'latest' => 'Latest Product',
     'detail' => 'Detail',
     'add-cart' => 'Add to Cart',
-    'information' => 'Information',
-    'quantity' => 'Quantity',
-    'rate' => 'Rate',
-    'price' => 'Price',
-    'category' => 'Category',
+    'info' => [
+        'category' => 'Category',
+        'rate' => 'Rate',
+        'price' => 'Price',
+        'information' => 'Information',
+        'quantity' => 'Quantity',
+    ],
+
 
     //msg
     'required-login' => 'Please login to rate this product',
@@ -291,4 +295,20 @@ return [
     'twitter' => 'Tweet',
     'google' => 'Share on Google+',
     'facebook' => 'Facebook',
+
+    'menu' => [
+        'categories' => 'Categories',
+        'suggest' => 'Send Suggest',
+        'cart' => 'My Cart',
+        'profile' => 'My Profile',
+        'change-password' => 'Change Password',
+        'order' => 'My Order',
+        'admin-user' => 'User',
+        'admin-category' => 'Category',
+        'admin-product' => 'Product',
+        'admin-order' => 'Order',
+        'admin-suggest' => 'Suggest',
+        'list' => 'List',
+        'create' => 'Create New',
+    ],
 ];

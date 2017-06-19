@@ -32,6 +32,7 @@ return [
         1 => 'Processing',
         2 => 'Done',
         3 => 'Pending',
+        4 => 'Cancelled',
     ],
 
     'default_order_cancel' => 4,

@@ -138,4 +138,9 @@ $(document).ready(function () {
         window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');
         return false;
     });
+
+    $('#logout').on('click', function (e) {
+        e.preventDefault();
+        $('#logout-form').submit();
+    });
 });

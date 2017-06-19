@@ -4,7 +4,6 @@ namespace App\Helpers;
 
 use App\Models\Category;
 use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\Auth;
 
 class Helper
 {
