@@ -4,12 +4,15 @@ $(document).ready(function () {
         CKEDITOR.replace(textarea);
     }
 
-    $('form#delete').submit(function (e) {
+    $('form#cancel').submit(function (e) {
         e.preventDefault();
-        var id = $(this).find('input[value=Delete]').attr('data-id');
-        if (confirm('DELETE ID : ' + id)) {
-            this.submit();
-        }
+        var id = $(this).attr('data-id');
+        var msg = $(this).attr('data-msg');
+        alertify.confirm(msg,
+            function () {
+                $('form#cancel').unbind().submit();
+            }
+        );
     });
 
     $('.reload').click(function () {
@@ -99,11 +102,11 @@ $(document).ready(function () {
                 data: {'_method': 'DELETE'},
                 success: function (result) {
                     if (!!result.error) {
-                        alertify.notify(result.msg, 'error', 1);
+                        alertify.error(result.msg);
                         return;
                     } else {
                         $('table >tbody').hide();
-                        alertify.notify(result.msg, 'success', 1);
+                        alertify.success(result.msg);
                         location.reload();
                     }
                 }

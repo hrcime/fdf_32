@@ -25,6 +25,7 @@ return [
         'b-detail' => 'Detail',
         'b-back' => 'Back',
         'b-update' => 'Update',
+        'b-cancel' => 'Cancel',
 
         //status
         'status' => [
@@ -32,12 +33,19 @@ return [
             1 => 'Processing',
             2 => 'Pending',
             3 => 'Done',
+            4 => 'Cancelled',
         ],
 
         'msg-updated' => 'Updated',
         'msg-success' => 'Changed',
         'msg-deleted' => 'Deleted',
+        'msg-cancelled' => 'Cancelled',
         'msg-notfound' => 'Order not found',
+        'msg-success' => 'Order success',
+        'msg-missing' => 'Missing information',
+        'msg-fail' => 'Order fail',
+        'msg-empty' => 'Cart is empty',
+        'msg-cancel' => 'Cancel order ?',
     ],
 
     'cart' => [
@@ -60,7 +68,7 @@ return [
 
         'msg' => [
             'added' => 'Added',
-            'updated'=> 'Updated',
+            'updated' => 'Updated',
             'removed' => 'Removed',
             'notfound' => 'Product not found',
             'ajax' => 'Support for ajax',

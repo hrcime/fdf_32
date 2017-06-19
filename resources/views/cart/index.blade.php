@@ -5,6 +5,7 @@
             <div class="col-md-9">
                 <div class="panel panel-default">
                     <div class="panel-body">
+                        @include ('error')
                         <table class="table table-bordered">
                             <thead>
                             <tr>
@@ -89,12 +90,14 @@
                         <div>
                             <span>{{ trans('layout.cart.title.total-bill') }}</span>
                             <div class="pull-right">
-                                <span class="value">{{ Cart::total() }}</span>
+                                <span class="value">{{ number_format(Cart::total()) }}</span>
                             </div>
                             <div class="clearfix"></div>
                         </div>
                         <hr>
-                        <button class="btn btn-primary btn-block">{{ trans('layout.cart.btn.order') }}</button>
+                        {{ Form::open(['action' => 'OrderController@store']) }}
+                            {{ Form::submit(trans('layout.cart.btn.order'), ['class' => 'btn btn-primary btn-block']) }}
+                        {{ Form::close() }}
                     </div>
                 </div>
             </div>

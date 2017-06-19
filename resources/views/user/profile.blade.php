@@ -6,11 +6,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">{{ trans('layout.user.t-profile') }}</div>
                     <div class="panel-body">
-                        @if (session('success'))
-                        <p class="btn-primary">
-                            {{ session('success') }}
-                        </p>
-                        @endif
+                        @include ('error')
                         <div class="row">
                             <div class="col-md-9">
                                 {{ Form::open(['class' => 'form-horizontal', 'enctype' => 'multipart/form-data', 'role' => 'form', 'method' => 'POST', 'route' => 'user.show']) }}
