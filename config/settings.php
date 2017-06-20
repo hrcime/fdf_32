@@ -2,7 +2,7 @@
 
 return [
     //product / page
-    'product_per_page' => 15,
+    'product_per_page' => 16,
 
     //product / row
     'product_per_row' => 4,
@@ -30,8 +30,8 @@ return [
     'order_status' => [
         0 => 'New',
         1 => 'Processing',
-        2 => 'Done',
-        3 => 'Pending',
+        2 => 'Pending',
+        3 => 'Done',
         4 => 'Cancelled',
     ],
 

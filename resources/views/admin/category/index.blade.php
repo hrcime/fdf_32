@@ -7,7 +7,9 @@
                     <div class="panel-heading">
                         {{ trans('layout.category.t-category') }}
                         <div class="pull-right" >
-                            <a href="{{ route('admin.category.create') }}" class="btn btn-primary btn-xs">{{ trans('layout.category.b-create') }}</a>
+                            <a href="{{ route('admin.category.create') }}" class="btn btn-primary btn-xs">
+                                {{ trans('layout.category.b-create') }}
+                            </a>
                         </div>
                         <div class="clearfix"></div>
                     </div>
@@ -33,18 +35,23 @@
                                             @endif
                                         </td>
                                         <td class="col-md-1">
-                                            <a href="{{ route('admin.category.edit', $category->id) }}" class="btn btn-info btn-xs">{{ trans('layout.category.b-edit') }}</a>
+                                            <a href="{{ route('admin.category.edit', $category->id) }}"
+                                                class="btn btn-info btn-xs">
+                                                {{ trans('layout.category.b-edit') }}
+                                            </a>
                                         </td>
                                         <td class="col-md-1">
-                                            {{ Form::open(['id' => 'delete', 'route' => ['admin.category.destroy', $category->id], 'method' => 'delete']) }}
-                                                {{ Form::submit(trans('layout.category.b-delete'), ['data-id' => $category->id, 'class' => 'btn btn-xs btn-danger']) }}
+                                            {{ Form::open(['id' => 'delete', 'method' => 'delete',
+                                                'route' => ['admin.category.destroy', $category->id]]) }}
+                                                {{ Form::submit(trans('layout.category.b-delete'),
+                                                    ['data-id' => $category->id, 'class' => 'btn btn-xs btn-danger']) }}
                                             {{ Form::close() }}
                                         </td>
                                     </tr>
                                 @endforeach
                             </tbody>
                         </table>
-                        {{ $categories['links'] }}
+                        {{ $categories->links() }}
                     </div>
                 </div>
             </div>
