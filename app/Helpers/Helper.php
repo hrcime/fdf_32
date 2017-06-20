@@ -2,6 +2,7 @@
 
 namespace App\Helpers;
 
+use App\Models\Category;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Auth;
 
@@ -18,5 +19,10 @@ class Helper
         $file->move(config('settings.path_upload') . '/' . $path . '/', $imageName);
 
         return $imageName;
+    }
+
+    public static function getCategories()
+    {
+        return Category::pluck('name', 'id')->toArray();
     }
 }

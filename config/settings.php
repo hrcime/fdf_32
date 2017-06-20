@@ -30,10 +30,16 @@ return [
     'order_status' => [
         0 => 'New',
         1 => 'Processing',
-        2 => 'Pending',
-        3 => 'Done',
-        4 => 'Cancelled',
+        2 => 'Done',
+        3 => 'Pending',
     ],
 
     'default_order_cancel' => 4,
+
+    'filter' => [
+        'rate' => [
+            'min' => 0,
+            'max' => 5,
+        ],
+    ],
 ];

@@ -1,6 +1,18 @@
 <?php
 
 return [
+    'filter' => [
+        'default' => 'Select One',
+        'price' => 'Price',
+        'from' => 'From',
+        'to' => 'To',
+        'category' => 'Category',
+        'rate' => 'Rate',
+        'keyword' => 'Keyword',
+
+        //btn
+        'b-filter' => 'Filter',
+    ],
     'order' => [
         //title
         't-orders' => 'Orders',
