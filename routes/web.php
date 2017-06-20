@@ -43,6 +43,8 @@ Route::post('suggest', ['middleware' => 'auth', 'uses' => 'SuggestController@sto
 
 //Admin router
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'admin', 'as' => 'admin.'], function () {
+    Route::get('/', 'HomeController@index');
+
     //Route manager user
     Route::resource('user', 'UserController', ['except' => 'show']);
 
