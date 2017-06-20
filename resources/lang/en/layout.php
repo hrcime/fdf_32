@@ -274,4 +274,9 @@ return [
     'required-login' => 'Please login to rate this product',
     'support-ajax' => 'Support for ajax',
     'try-again' => 'Please try again later',
+
+    //btn share social
+    'twitter' => 'Tweet',
+    'google' => 'Share on Google+',
+    'facebook' => 'Facebook',
 ];
